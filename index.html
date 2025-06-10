@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Your Cafe - Play the Ultimate Cafe Management Game Online Free</title>
+    <meta name="description" content="Play Run Your Cafe online for free! Build and manage your dream cafe in this engaging merge and bake game. Create delicious treats, serve customers, and grow your business.">
+    <meta name="keywords" content="Run Your Cafe, cafe game, restaurant game, management game, online game, free game, merge game, baking game">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://runyourcafe.com/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Run Your Cafe - Play Online Free">
+    <meta property="og:description" content="Build and manage your dream cafe in this engaging merge and bake game. Play for free now!">
+    <meta property="og:url" content="https://runyourcafe.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Run Your Cafe">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Run Your Cafe - Play Online Free">
+    <meta name="twitter:description" content="Build and manage your dream cafe in this engaging merge and bake game.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 20px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #007aff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo::before {
+            content: "☕";
+            font-size: 1.8rem;
+        }
+        
+        .tagline {
+            color: #86868b;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+        
+        main {
+            padding: 40px 0;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            color: #86868b;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.5;
+        }
+        
+        .game-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 50px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .game-frame {
+            width: 100%;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .content-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+        }
+        
+        .content-card p {
+            color: #86868b;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features-list li {
+            padding: 8px 0;
+            color: #86868b;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #34c759;
+            font-weight: bold;
+        }
+        
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            color: white;
+            padding: 50px 30px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        footer {
+            background: #1d1d1f;
+            color: #86868b;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #86868b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #007aff;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .game-frame {
+                height: 400px;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .content-card {
+                padding: 20px;
+            }
+            
+            .cta-section {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .game-frame {
+                height: 350px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Loading animation */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            color: #86868b;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007aff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Run Your Cafe</a>
+                <div class="tagline">Build, Merge, and Manage Your Dream Cafe</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Run Your Cafe</h1>
+                <p class="hero-description">
+                    Experience the ultimate cafe management adventure where you merge ingredients, bake delicious treats, and build your culinary empire from scratch.
+                </p>
+            </section>
+
+            <section class="game-container">
+                <div class="loading" id="gameLoading">
+                    <div class="spinner"></div>
+                    Loading your cafe experience...
+                </div>
+                <iframe 
+                    src="https://www.crazygames.com/embed/piece-of-cake-merge-and-bake" 
+                    class="game-frame"
+                    id="gameFrame"
+                    allow="gamepad *;"
+                    onload="document.getElementById('gameLoading').style.display='none';"
+                    title="Run Your Cafe Game">
+                </iframe>
+            </section>
+
+            <section class="content-grid">
+                <div class="content-card">
+                    <h2><span class="icon">🎮</span>Game Overview</h2>
+                    <p>Run Your Cafe is an engaging merge and management game that combines strategic thinking with creative cafe building. Start with basic ingredients and gradually expand your menu by merging items to create spectacular dishes and beverages.</p>
+                    <p>Your journey begins with a small cafe space where every decision matters. Manage your resources wisely, serve customers efficiently, and watch your humble establishment transform into a bustling culinary destination.</p>
+                </div>
+
+                <div class="content-card">
+                    <h2><span class="icon">⭐</span>Key Features</h2>
+                    <ul class="features-list">
+                        <li>Innovative merge gameplay mechanics</li>
+                        <li>Dozens of unique recipes to discover</li>
+                        <li>Progressive cafe customization options</li>
+                        <li>Challenging customer service scenarios</li>
+                        <li>Rewarding achievement system</li>
+                        <li>Stunning visual design and animations</li>
+                        <li>Free to play with no downloads required</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h2><span class="icon">🎯</span>How to Play</h2>
+                    <p>Master the art of cafe management through intuitive merge mechanics. Combine similar ingredients to create new items, fulfill customer orders, and earn coins to expand your business.</p>
+                    <p>Strategic planning is essential as you balance ingredient production, customer satisfaction, and cafe upgrades. Each level presents new challenges and opportunities to showcase your entrepreneurial skills.</p>
+                </div>
+
+                <div class="content-card">
+                    <h2><span class="icon">🏆</span>Why Choose Run Your Cafe</h2>
+                    <p>Unlike traditional management games, Run Your Cafe offers a unique blend of puzzle-solving and business simulation. The merge mechanic adds an extra layer of strategy that keeps gameplay fresh and engaging.</p>
+                    <p>Whether you're a casual gamer looking for relaxing entertainment or a strategy enthusiast seeking complex challenges, this game adapts to your playing style and provides hours of immersive gameplay.</p>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <h2>Ready to Start Your Cafe Journey?</h2>
+                <p>Join thousands of players who have already discovered the joy of running their own virtual cafe. Start playing now and see how far your culinary creativity can take you!</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 RunYourCafe.com - All rights reserved</p>
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/contact">Contact Us</a>
+                <a href="/about">About</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced game loading experience
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameFrame = document.getElementById('gameFrame');
+            const loadingDiv = document.getElementById('gameLoading');
+            
+            // Hide loading after iframe loads
+            gameFrame.addEventListener('load', function() {
+                setTimeout(() => {
+                    loadingDiv.style.display = 'none';
+                }, 500);
+            });
+            
+            // Fallback to hide loading after 10 seconds
+            setTimeout(() => {
+                loadingDiv.style.display = 'none';
+            }, 10000);
+        });
+
+        // Add smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
